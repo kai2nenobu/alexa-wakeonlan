@@ -8,6 +8,12 @@
   },
   "author": "Tsunenobu Kai",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "cdk": "cdk"
+  },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
     "@types/jest": "^26.0.10",
