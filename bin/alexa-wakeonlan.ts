@@ -5,5 +5,4 @@ import { AlexaWakeonlanStack } from '../lib/alexa-wakeonlan-stack';
 
 const app = new cdk.App();
 // eslint-disable-next-line no-new
-new AlexaWakeonlanStack(app, 'AlexaWakeonlanStack', {
-});
+new AlexaWakeonlanStack(app, 'AlexaWakeonlanStack', {});
