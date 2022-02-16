@@ -15,7 +15,7 @@ plugins:
 ignorePatterns:
   - '**/cdk.out/'
 rules:
-  import/extensions: [error, never]  # import文の拡張子を禁止する
+  import/extensions: [error, never] # import文の拡張子を禁止する
   import/prefer-default-export: off
   import/no-extraneous-dependencies:
     - error
