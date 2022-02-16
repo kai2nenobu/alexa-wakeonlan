@@ -8,10 +8,13 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "format": "eslint --ext js,ts --fix .",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "eslint --ext js,ts --fix .",
+    "format:prettier": "prettier --write .",
     "lint:eslint": "eslint --ext js,ts .",
+    "lint:prettier": "prettier --check .",
     "lint:tsc": "tsc --noEmit",
-    "lint": "npm run lint:eslint && npm run lint:tsc",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
