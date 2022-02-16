@@ -12,7 +12,10 @@ plugins:
 rules:
   import/extensions: [error, never]  # import文の拡張子を禁止する
   import/prefer-default-export: off
+  import/no-extraneous-dependencies:
+    - error
+    - devDependencies: true
 settings:
   import/resolver:
-    node:
-      extensions: [.ts, .js]
+    typescript:
+      alwaysTryTypes: true

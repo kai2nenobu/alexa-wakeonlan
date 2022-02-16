@@ -8,6 +8,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
+    "format": "eslint --ext js,ts --fix .",
+    "lint:eslint": "eslint --ext js,ts .",
+    "lint:tsc": "tsc --noEmit",
+    "lint": "npm run lint:eslint && npm run lint:tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
@@ -24,6 +28,7 @@
     "esbuild": "^0.14.21",
     "eslint": "^8.9.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.4",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
