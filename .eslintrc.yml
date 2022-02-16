@@ -1,5 +1,5 @@
 env:
-  es2021: true
+  es2018: true
   node: true
 extends:
   - airbnb-base
@@ -9,4 +9,9 @@ parserOptions:
   sourceType: module
 plugins:
   - '@typescript-eslint'
-rules: {}
+rules:
+  import/extensions: [error, never]  # import文の拡張子を禁止する
+settings:
+  import/resolver:
+    node:
+      extensions: [.ts, .js]
