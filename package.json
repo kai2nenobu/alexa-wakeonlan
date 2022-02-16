@@ -1,0 +1,11 @@
+{
+  "name": "alexa_wakeonlan",
+  "version": "0.1.0",
+  "description": "Alexa WakeOnLAN Skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tsunenobu Kai",
+  "license": "MIT"
+}
