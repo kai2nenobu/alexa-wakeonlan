@@ -2,18 +2,18 @@
   "name": "alexa_wakeonlan",
   "version": "0.1.0",
   "description": "Alexa WakeOnLAN Skill",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "alexa-wakonelan": "bin/alexa-wakeonlan.js"
   },
-  "author": "Tsunenobu Kai",
-  "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
   },
+  "author": "Tsunenobu Kai",
+  "license": "MIT",
   "devDependencies": {
     "@types/aws-lambda": "^8.10.92",
     "@types/jest": "^26.0.10",
