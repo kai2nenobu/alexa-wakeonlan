@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tsunenobu Kai",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "aws-cdk-lib": "2.12.0",
+    "aws-sdk": "^2.1071.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.16"
+  }
 }
