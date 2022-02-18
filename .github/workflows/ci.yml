@@ -18,3 +18,13 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run lint
+  lint-yaml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Python 3.9
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Lint YAML
+        run: make lint-yamllint
