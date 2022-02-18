@@ -16,7 +16,7 @@ ignorePatterns:
   - 'pip/'
 rules:
   import/extensions: [error, never] # import文の拡張子を禁止する
-  import/prefer-default-export: off
+  import/prefer-default-export: 'off'
   import/no-extraneous-dependencies:
     - error
     - devDependencies: true

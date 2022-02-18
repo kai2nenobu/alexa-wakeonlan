@@ -1,6 +1,11 @@
 extends: default
 
-rules: {}
+rules:
+  comments:
+    min-spaces-from-content: 1
+  document-start: false
+  truthy:
+    check-keys: false
 
 ignore: |
   node_modules/
