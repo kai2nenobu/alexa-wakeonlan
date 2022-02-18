@@ -12,7 +12,7 @@
     "format:eslint": "eslint --ext js,ts --fix .",
     "format:prettier": "prettier --write .",
     "lint:eslint": "eslint --ext js,ts .",
-    "lint:prettier": "prettier --check .",
+    "lint:prettier": "prettier --ignore-path .gitignore --check .",
     "lint:tsc": "tsc --noEmit",
     "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:tsc",
     "watch": "tsc -w",
