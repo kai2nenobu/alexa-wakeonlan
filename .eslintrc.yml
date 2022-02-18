@@ -12,7 +12,8 @@ parserOptions:
 plugins:
   - '@typescript-eslint'
 ignorePatterns:
-  - '**/cdk.out/'
+  - 'cdk.out/'
+  - 'pip/'
 rules:
   import/extensions: [error, never] # import文の拡張子を禁止する
   import/prefer-default-export: off
