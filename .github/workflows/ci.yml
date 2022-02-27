@@ -49,5 +49,9 @@ jobs:
           node-version: 14.x
           cache: 'npm'
       - run: npm ci
-      - name: Deploy
-        run: npx cdk deploy --no-execute
+      - name: Show CDK diff
+        if: ${{ github.event_name == 'pull_request' }}
+        run: npx cdk diff
+      - name: Deploy CDK template
+        if: ${{ github.event_name == 'push' }}
+        run: npx cdk deploy --require-approval never
