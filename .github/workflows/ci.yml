@@ -33,6 +33,7 @@ jobs:
         run: make lint-yamllint
   deploy:
     runs-on: ubuntu-latest
+    needs: [lint, lint-yaml]
     permissions:
       id-token: write
       contents: read
