@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [main]
 
-env:
-  AWS_PRODUCTION_ROLE_ARN: arn:aws:iam::049991620551:role/GitHubActionsRole
-
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -41,8 +38,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: ${{ env.AWS_PRODUCTION_ROLE_ARN }}
-          aws-region: us-west-2
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
       - run: aws sts get-caller-identity
       - name: Use Node.js 14
         uses: actions/setup-node@v2
