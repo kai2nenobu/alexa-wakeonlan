@@ -35,7 +35,7 @@ jobs:
       id-token: write
       contents: read
     environment:
-      name: production
+      name: ${{ github.event_name == 'push' && 'production' || 'staging' }}
     steps:
       - uses: actions/checkout@v2
       - uses: aws-actions/configure-aws-credentials@v1
